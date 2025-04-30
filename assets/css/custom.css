@@ -69,7 +69,7 @@
 }
 
 .product-box-4 .product-detail .ec-add-to-cart-box .ec-etc-link {
-    background: var(--theme-color);
+    background: var(--theme-color2);
     color: #fff;
     padding: 8px 20px;
     border-radius: 100px;
@@ -91,17 +91,19 @@
     background: #f5f5f5;
     color: red;
 }
-.product-box-4 .product-detail .ec-add-to-cart-box .ec-etc-link.ec-etc-in-stock:hover{
-background: #3D5480;
+.product-box-4 .product-detail .ec-add-to-cart-box .ec-etc-link.ec-etc-in-stock:hover {
+    background-image: var(--theme-color2-hover);
+    background-size: 200%, 1px;
 }
 
 .product-box-4 .product-detail .ec-add-to-cart-box .ec-etc-link.ec-etc-preorder {
-    background: #3D5480;
+    background: var(--theme-color3);
     color: #fff;
 }
 .product-box-4 .product-detail .ec-add-to-cart-box .ec-etc-link.ec-etc-preorder:hover {
-    background: #f5f5f5;
-    color: #3D5480;
+    color: #fff;
+    background-image: var(--theme-color3-hover);
+    background-size: 200%, 1px;
 }
 
 .ec-pd-slider .slider-image img {
@@ -768,6 +770,22 @@ background: #3D5480;
 .checkout-cart-box .cart-total span {
     font-weight: 700;
 }
+.eco-check-coupon .coupon-cart .coupon-box {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+}
+.eco-check-coupon .coupon-cart .coupon-box .form-control {
+    border: 2px solid var(--theme-color);
+    padding: 10px;
+}
+.eco-check-coupon .coupon-cart .coupon-box .btn-apply {
+    background: var(--theme-color);
+    color: #fff;
+    padding: 0 calc(16px + 14 * (100vw - 320px) / 1600);
+    font-weight: 700;
+    border: none;
+}
 
 /* Responsive */
 
@@ -827,7 +845,10 @@ background: #3D5480;
     }
     .eco-call-center {
         bottom: 8rem;
-
+    }
+    .product-section .btn.btn-animation {
+        margin-bottom: 15px;
+        margin-top: 10px;
     }
 }
 

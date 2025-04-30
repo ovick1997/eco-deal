@@ -39,8 +39,8 @@
 }
 .theme-gradiant-1 {
     --theme-color: linear-gradient(to right, var(--theme-color2), var(--theme-color3));
-    --theme-color2: #28517f;
-    --theme-color3: #275e79;
+    --theme-color2: #37b34a;
+    --theme-color3: #8bc53f;
 }
 
 button,
@@ -12597,11 +12597,16 @@ template {
 }
 
 :root {
-    --theme-color: #71BF53;
+    --theme-color: #37b34a;
     --theme-color-rgb: 13, 164, 135;
-    --theme-color1: #74BF4A;
+    --theme-color1: #8bc53f;
     --theme-color1-rgb: 14, 148, 122;
-    --theme-color2: linear-gradient(90.56deg, var(--theme-color1) 8.46%, var(--theme-color) 62.97%)
+    --theme-color-2-s:#2A4588;
+    --theme-color-3-s:#2C6875;
+    --theme-color2: linear-gradient(to right, var(--theme-color1) 0, var(--theme-color) 100%);
+    --theme-color2-hover: linear-gradient(to right, var(--theme-color) 0, var(--theme-color1) 100%);
+    --theme-color3: linear-gradient(to right, var(--theme-color-2-s) 0, var(--theme-color-3-s) 100%);
+    --theme-color3-hover: linear-gradient(to right, var(--theme-color-3-s) 0, var(--theme-color-2-s) 100%);
 }
 
 @-webkit-keyframes scaleUpDown {
@@ -16976,10 +16981,10 @@ body.rtl .product-section-box .review-box .review-people .review-list li .people
 
 .product-wrapper .slick-dots li.slick-active button {
     margin: 0;
-    width: calc(30px + 10*(100vw - 320px)/1600);
-    background-color: var(--theme-color);
+    width: calc(30px + 10 * (100vw - 320px) / 1600);
+    background: var(--theme-color2);
     -webkit-transition: all .5s ease;
-    transition: all .5s ease
+    transition: all .5s ease;
 }
 
 .product-wrapper .timer {
@@ -17977,10 +17982,12 @@ body.rtl .product-section-box .review-box .review-people .review-list li .people
 }
 
 .title {
-    margin-bottom: calc(16px + 14*(100vw - 320px)/1600);
+    margin-bottom: calc(5px + 6 * (100vw - 320px) / 1600);
     display: inline-block;
-    position: relative
+    position: relative;
 }
+
+
 
 .title h2 {
     font-weight: 700;
@@ -22714,9 +22721,9 @@ header .onhover-dropdown .onhover-div-login .user-box-name li {
 header .onhover-dropdown .onhover-div-login .user-box-name li a {
     color: #222;
     display: block;
-    position: relative
+    position: relative;
+    font-weight: 600;
 }
-
 header .onhover-dropdown .onhover-div-login .user-box-name li a:hover::after {
     width: 40%
 }
@@ -22725,15 +22732,15 @@ header .onhover-dropdown .onhover-div-login .user-box-name li a::after {
     content: "";
     position: absolute;
     width: 0;
-    height: 4px;
+    height: 2px;
     bottom: 2px;
     left: 0;
-    background-color: var(--theme-color);
-    opacity: .3;
+    opacity: .7;
     border-radius: 50px;
     -webkit-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
-    z-index: -1
+    z-index: -1;
+    background: var(--theme-color2);
 }
 
 header .onhover-dropdown .onhover-div .cart-list {
@@ -39613,10 +39620,10 @@ body.rtl .menu-label {
 }
 
 .review-section .reviewer-box .reviewer-profile .reviewer-image {
-    width: calc(65px + 10*(100vw - 320px)/1600);
+    width: calc(40px + 10 * (100vw - 320px) / 1600);
     height: auto;
     border-radius: 8px;
-    overflow: hidden
+    overflow: hidden;
 }
 
 .review-section .reviewer-box .reviewer-profile .reviewer-image img {
@@ -39627,9 +39634,9 @@ body.rtl .menu-label {
 }
 
 .review-section .reviewer-box .reviewer-profile .reviewer-name h4 {
-    font-weight: 700;
-    font-size: calc(16px + 2*(100vw - 320px)/1600);
-    color: var(--theme-color)
+    font-weight: 500;
+    font-size: calc(16px + 2 * (100vw - 320px) / 1600);
+    color: var(--theme-color);
 }
 
 .review-section .reviewer-box .reviewer-profile .reviewer-name h6 {

@@ -274,7 +274,7 @@ $(window).on("load resize", function () {
    ==========================*/
 $(".notifi-wishlist").on("click", function () {
     $.notify({
-        icon: "fa fa-check",
+        icon: "fa-solid fa-check",
         title: "Success!",
         message: "Item Successfully added in wishlist",
     }, {
