@@ -858,8 +858,7 @@
         padding: 20px 0 0px   ;
     }
     .breadcrumb-section {
-       
-        margin-top: 20px;
+        margin-top: 0;
     }
     .checkout-cart-box .cart-item .cart-item-box .cart-item-detail {
         flex-basis: 60%;
