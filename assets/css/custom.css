@@ -281,10 +281,10 @@
     border-radius: 100px;
     font-size: 15px;
 }
-.checkout-cart-box .cart-item .cart-item-box .remove-btn:hover {
+/* .checkout-cart-box .cart-item .cart-item-box .remove-btn:hover {
     background: red;
     color: #fff;
-}
+} */
 
 .checkout-cart-box {
     height: 98vh;
@@ -687,16 +687,16 @@
 .eco-product-hover-details {
     display: none;
     opacity: 0;
-    transform: translateY(20px);
-    overflow: hidden;
-    max-height: 0;
-    transition: all 0.6s ease-in-out;
+    transform: translateY(20px) scaleY(0.95);
     position: absolute;
     bottom: 45px;
     padding: 15px 10px 10px;
     background: #fff;
     border-radius: 5px;
     width: 100%;
+    pointer-events: none;
+    visibility: hidden;
+    transform-origin: bottom;
 }
 
 
@@ -706,9 +706,22 @@
     display: block !important;
     max-height: 500px; /* Set a large enough value to show the content */
     opacity: 1;
-    transform: translateY(0); /* Move to original position */
+    animation: smoothSlideUp 0.5s ease-out forwards;
+    pointer-events: auto;
+    visibility: visible;
+
 }
 
+@keyframes smoothSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px) scaleY(0.95);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scaleY(1);
+    }
+}
    
 .checkout-left-c-body{
     flex-basis: 100%;
@@ -798,6 +811,24 @@
 .offcanvas-header .btn-close {
     position: absolute;
     right: 12px;
+}
+@keyframes rsiShaker1 {
+    0%, to {
+        transform: scaleX(1);
+    }
+    10%, 20% {
+        transform: scale3d(0.97, 0.97, 0.97) rotate(-1deg);
+    }
+    30%, 50%, 70%, 90% {
+        transform: scale3d(1.03, 1.03, 1.03) rotate(1deg);
+    }
+    40%, 60%, 80% {
+        transform: scale3d(1.03, 1.03, 1.03) rotate(-1deg);
+    }
+}
+
+.ec-shake {
+    animation: rsiShaker1 0.86s cubic-bezier(.35,.06,.2,.98) both;
 }
 
 /* Responsive */

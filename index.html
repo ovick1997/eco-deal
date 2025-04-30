@@ -156,66 +156,13 @@
                                     </li>
                                     <li class="right-side">
                                         <div class="onhover-dropdown header-badge">
-                                            <button type="button" class="btn p-0 position-relative header-wishlist">
+                                            <button type="button" class="btn p-0 position-relative header-wishlist" data-bs-toggle="offcanvas" data-bs-target="#checkout-offcanvas" aria-controls="checkout-offcanvas">
                                                 <i data-feather="shopping-cart"></i>
                                                 <span class="position-absolute top-0 start-100 translate-middle badge">২
                                                     <span class="visually-hidden">unread messages</span>
                                                 </span>
                                             </button>
 
-                                            <div class="onhover-div">
-                                                <ul class="cart-list">
-                                                    <li class="product-box-contain">
-                                                        <div class="drop-cart">
-                                                            <a href="product-details.html" class="drop-image">
-                                                                <img src="assets/images/vegetable/product/1.png"
-                                                                    class="blur-up lazyload" alt="">
-                                                            </a>
-
-                                                            <div class="drop-contain">
-                                                                <a href="product-details.html">
-                                                                    <h5>Fantasy Crunchy Choco Chip Cookies</h5>
-                                                                </a>
-                                                                <h6><span>1 x</span> ৳80.58</h6>
-                                                                <button class="close-button close_button">
-                                                                    <i class="fa-solid fa-xmark"></i>
-                                                                </button>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-
-                                                    <li class="product-box-contain">
-                                                        <div class="drop-cart">
-                                                            <a href="product-details.html" class="drop-image">
-                                                                <img src="assets/images/vegetable/product/2.png"
-                                                                    class="blur-up lazyload" alt="">
-                                                            </a>
-
-                                                            <div class="drop-contain">
-                                                                <a href="product-details.html">
-                                                                    <h5>Peanut Butter Bite Premium Butter Cookies 600 g
-                                                                    </h5>
-                                                                </a>
-                                                                <h6><span>1 x</span> ৳25.68</h6>
-                                                                <button class="close-button close_button">
-                                                                    <i class="fa-solid fa-xmark"></i>
-                                                                </button>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-
-                                                <div class="price-box">
-                                                    <h5>Total :</h5>
-                                                    <h4 class="theme-color fw-bold">৳106.58</h4>
-                                                </div>
-
-                                                <div class="button-group">
-                                                    <a href="cart.html" class="btn btn-sm cart-button">কার্ট দেখুন</a>
-                                                    <a href="checkout.html" class="btn btn-sm cart-button theme-bg-color
-                                                    text-white">চেকআউট</a>
-                                                </div>
-                                            </div>
                                         </div>
                                     </li>
                                     <li class="right-side onhover-dropdown">
@@ -1636,7 +1583,9 @@
 
                                 </h6>
                             </div>
-                            <button class="btn p-0 remove-btn"><i class="fa-light fa-trash-xmark"></i></button>
+                            <button class="btn p-0 remove-btn">
+                                <img src="assets/images/icon/delete.svg" alt="">
+                            </button>
                         </div>
                         <div class="cart-item-box">
                             <div class="cart-item-image">
@@ -1677,7 +1626,7 @@
 
                                 </h6>
                             </div>
-                            <button class="btn p-0 remove-btn"><i class="fa-light fa-trash-xmark"></i></button>
+                            <button class="btn p-0 remove-btn"><img src="assets/images/icon/delete.svg" alt=""></button>
                         </div>
                         <div class="cart-item-box">
                             <div class="cart-item-image">
@@ -1711,7 +1660,7 @@
 
                                 </h6>
                             </div>
-                            <button class="btn p-0 remove-btn"><i class="fa-light fa-trash-xmark"></i></button>
+                            <button class="btn p-0 remove-btn"><img src="assets/images/icon/delete.svg" alt=""></button>
                         </div>
                         <div class="cart-item-box">
                             <div class="cart-item-image">
@@ -1745,7 +1694,7 @@
 
                                 </h6>
                             </div>
-                            <button class="btn p-0 remove-btn"><i class="fa-light fa-trash-xmark"></i></button>
+                            <button class="btn p-0 remove-btn"><img src="assets/images/icon/delete.svg" alt=""></button>
                         </div>
                     </div>
                     <div class="cart-total">
@@ -1756,7 +1705,7 @@
                         <div class="ec-cart-group">
 
                             <div class="ec-cart-btn">
-                                <a href="checkout.html" class="btn btn-animation ec-order-now">অর্ডার করুন</a>
+                                <a href="checkout.html" class="btn btn-animation ec-order-now ec-shake">অর্ডার করুন</a>
                             </div>
                         </div>
                     </div>
@@ -1965,7 +1914,7 @@
                         <div class="ec-cart-group">
 
                             <div class="ec-cart-btn">
-                                <a href="checkout.html" class="btn btn-animation ec-order-now">অর্ডার করুন</a>
+                                <a href="checkout.html" class="btn btn-animation ec-order-now ec-shake">অর্ডার কনফার্ম করুন ৯৫০ TK </a>
                             </div>
                         </div>
                     </div>
@@ -2131,7 +2080,14 @@
 
     </script>
     
-  
+    <script>
+        setInterval(function() {
+          const btn = document.querySelector('.ec-order-now');
+          btn.classList.remove('ec-shake');
+          void btn.offsetWidth; // force reflow
+          btn.classList.add('ec-shake');
+        }, 3000); // every 3 seconds
+      </script>
     
     
 </body>
