@@ -175,7 +175,8 @@
 
 @media (max-width: 768px) {
     .eco-product-main-wrapper {
-        grid-template-columns: repeat(1, 1fr); /* 1 item per row on small screens */
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
     }
 }
 
@@ -200,7 +201,10 @@
     font-weight: 600;
     color: var(--theme-color);
     font-size: 18px;
+    padding-right: 25px;
 }
+
+
 
 .checkout-cart-box .cart-item .cart-item-box {
     display: flex;
@@ -270,12 +274,12 @@
 }
 
 .checkout-cart-box .cart-item .cart-item-box .remove-btn {
-    background: #ffdede;
+    /* background: #ffdede; */
     width: 25px;
     height: 25px;
     color: red;
     border-radius: 100px;
-    font-size: 12px;
+    font-size: 15px;
 }
 .checkout-cart-box .cart-item .cart-item-box .remove-btn:hover {
     background: red;
@@ -708,7 +712,7 @@
    
 .checkout-left-c-body{
     flex-basis: 100%;
-    height: 58vh;
+    height: 60vh;
     overflow: hidden;
     overflow-y: auto;
     padding-right: 10px;
@@ -791,6 +795,10 @@
     font-weight: 700;
     border: none;
 }
+.offcanvas-header .btn-close {
+    position: absolute;
+    right: 12px;
+}
 
 /* Responsive */
 
@@ -800,6 +808,24 @@
 }
 }
 @media(max-width: 767px) {
+    .eco-variation-container .input-container {
+        position: relative;
+        height: 40px;
+        width: 40px;
+        animation: slide-up 0.6s ease-out;
+        border-radius: 100px;
+    }
+    
+    .eco-variation-container .radio-tile-group {
+        margin-bottom: 0px;
+        gap: 5px;
+    }
+    .eco-variation-container .input-container .radio-tile-label {
+        font-size: 10px;
+    }
+    .deal-section .title h2 {
+        padding-bottom: 10px;
+    }
     .theme-form-floating label {
         line-height: 1;
     }
@@ -834,7 +860,7 @@
         line-height: 1;
     }
     .checkout-left-c-body {
-        height: 48vh;
+        height: 52vh;
     }
     .breadcrumb-section .breadcrumb-contain {
         padding: calc(18px + 14 * (100vw - 320px) / 1600) 0;
@@ -883,7 +909,7 @@
       
     }
     .checkout-offcanvas-body .col-xxl-6:last-child {
-        margin-top: 0px;
+        margin-top: 25px;
     }
     .checkout-offcanvas-body .col-xxl-6 {
         margin-top: 0px;
@@ -895,6 +921,12 @@
         margin-bottom: 15px;
         margin-top: 10px;
     }
+    .product-box-4 .product-detail .ec-add-to-cart-box .ec-etc-link {
+        padding: 5px 13px;
+        font-size: 12px;
+  
+    }
+    
 }
 
 /* responsive max width - max 1124 - min 1024px*/
