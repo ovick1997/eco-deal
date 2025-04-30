@@ -800,6 +800,9 @@
 }
 }
 @media(max-width: 767px) {
+    .theme-form-floating label {
+        line-height: 1;
+    }
     .breadcrumb-section .breadcrumb-contain nav .breadcrumb {
         justify-content: end;
     }
