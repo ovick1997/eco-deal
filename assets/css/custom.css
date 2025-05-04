@@ -831,6 +831,21 @@
     animation: rsiShaker1 0.86s cubic-bezier(.35,.06,.2,.98) both;
 }
 
+.eco-product-main-wrapper .eco-pm-item .product-box-4 .label-flex .btn-remove-wishlist {
+    font-size: calc(16px + 6 * (100vw - 320px) / 1600);
+    color: #fff;
+    margin-left: auto;
+    position: absolute;
+    right: -3px;
+    top: -4px;
+    z-index: 1;
+    background: red;
+    width: 15px;
+    height: 15px;
+    border-radius: 100px;
+    font-size: 12px;
+}
+
 /* Responsive */
 
 @media(min-width: 768px) {
@@ -936,7 +951,7 @@
     }
     .ec-cart-group .ec-cart-btn a {
         padding: 8px 15px;
-        width: 190px;
+        width: 230px;
       
     }
     .checkout-offcanvas-body .col-xxl-6:last-child {
